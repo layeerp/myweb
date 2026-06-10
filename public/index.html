@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="روابط Layeer الشخصية: تيليجرام وتيك توك" />
   <meta property="og:title" content="Layeer | Links" />
-  <meta property="og:description" content="كل روابط حساباتي في صفحة واحدة" />
+  <meta property="og:description" content="روابط حساباتي الشخصية" />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0f1020" />
+  <meta name="theme-color" content="#0b0f14" />
   <title>Layeer | Links</title>
+
   <style>
     * {
       box-sizing: border-box;
@@ -17,136 +18,147 @@
     }
 
     :root {
-      --bg: #080914;
-      --card: rgba(255, 255, 255, 0.09);
-      --card-border: rgba(255, 255, 255, 0.18);
-      --text: #ffffff;
-      --muted: rgba(255, 255, 255, 0.72);
-      --soft: rgba(255, 255, 255, 0.12);
-      --glow: rgba(132, 70, 255, 0.45);
+      --bg: #0b0f14;
+      --card: #111821;
+      --card-soft: #151f2b;
+      --border: #223044;
+      --text: #eef4ff;
+      --muted: #91a1b6;
+      --accent: #7aa2ff;
+      --accent-soft: rgba(122, 162, 255, 0.12);
     }
 
     body {
       min-height: 100vh;
       font-family: Tahoma, Arial, sans-serif;
       background:
-        radial-gradient(circle at 20% 20%, rgba(132, 70, 255, 0.38), transparent 30%),
-        radial-gradient(circle at 80% 0%, rgba(0, 210, 255, 0.24), transparent 32%),
-        radial-gradient(circle at 50% 100%, rgba(255, 49, 130, 0.20), transparent 35%),
+        radial-gradient(circle at top, rgba(122, 162, 255, 0.10), transparent 34%),
         var(--bg);
       color: var(--text);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 28px 16px;
-      overflow-x: hidden;
+      padding: 24px 14px;
     }
 
-    .wrap {
+    .page {
       width: 100%;
-      max-width: 440px;
-      position: relative;
-    }
-
-    .glow {
-      position: absolute;
-      inset: 18px;
-      background: var(--glow);
-      filter: blur(70px);
-      border-radius: 44px;
-      z-index: -1;
-      opacity: 0.9;
+      max-width: 420px;
     }
 
     .card {
       background: var(--card);
-      border: 1px solid var(--card-border);
-      border-radius: 30px;
-      padding: 30px 22px 24px;
-      backdrop-filter: blur(18px);
-      box-shadow: 0 28px 90px rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px 20px 20px;
       text-align: center;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
     }
 
     .avatar {
-      width: 96px;
-      height: 96px;
-      margin: 0 auto 18px;
-      border-radius: 28px;
+      width: 84px;
+      height: 84px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
       display: grid;
       place-items: center;
-      font-size: 42px;
-      font-weight: 900;
-      letter-spacing: 1px;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.22), rgba(255,255,255,0.06)),
-        linear-gradient(135deg, #7c3cff, #00d2ff);
-      border: 1px solid rgba(255, 255, 255, 0.30);
-      box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+      background: var(--accent-soft);
+      border: 1px solid rgba(122, 162, 255, 0.28);
+      color: var(--accent);
+      font-size: 36px;
+      font-weight: 800;
       direction: ltr;
     }
 
+    .domain {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      color: var(--muted);
+      background: var(--card-soft);
+      border: 1px solid var(--border);
+      font-size: 13px;
+      direction: ltr;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #80d6a3;
+    }
+
     h1 {
-      font-size: 34px;
-      line-height: 1.1;
       margin-bottom: 8px;
+      font-size: 32px;
       direction: ltr;
     }
 
     .subtitle {
-      font-size: 15px;
+      margin-bottom: 22px;
       color: var(--muted);
-      margin-bottom: 24px;
+      font-size: 14px;
+      line-height: 1.7;
     }
 
     .links {
       display: grid;
-      gap: 13px;
-      margin-top: 10px;
+      gap: 12px;
+      text-align: right;
     }
 
     .link {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 14px;
-      padding: 15px 16px;
+      gap: 12px;
+      padding: 14px;
       border-radius: 18px;
-      text-decoration: none;
+      background: var(--card-soft);
+      border: 1px solid var(--border);
       color: var(--text);
-      background: rgba(255, 255, 255, 0.105);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+      text-decoration: none;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
     }
 
     .link:hover {
-      transform: translateY(-3px) scale(1.01);
-      background: rgba(255, 255, 255, 0.17);
-      border-color: rgba(255, 255, 255, 0.32);
+      transform: translateY(-2px);
+      background: #182331;
+      border-color: rgba(122, 162, 255, 0.42);
     }
 
-    .left {
+    .link-main {
       display: flex;
       align-items: center;
       gap: 12px;
-      text-align: right;
+      min-width: 0;
     }
 
     .icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
+      width: 44px;
+      height: 44px;
+      border-radius: 15px;
       display: grid;
       place-items: center;
-      background: var(--soft);
-      font-size: 22px;
-      flex: 0 0 auto;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      color: var(--accent);
+    }
+
+    .icon svg {
+      width: 23px;
+      height: 23px;
+      display: block;
     }
 
     .info strong {
       display: block;
-      font-size: 16px;
-      margin-bottom: 3px;
+      margin-bottom: 4px;
+      font-size: 15px;
+      font-weight: 700;
     }
 
     .info span {
@@ -158,63 +170,55 @@
     }
 
     .arrow {
-      opacity: 0.74;
-      font-size: 20px;
+      color: var(--muted);
+      font-size: 19px;
       direction: ltr;
     }
 
     .footer {
-      margin-top: 22px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(255, 255, 255, 0.13);
-      color: rgba(255, 255, 255, 0.58);
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      color: #6f7f94;
       font-size: 12px;
       direction: ltr;
     }
 
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 13px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.10);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      color: rgba(255, 255, 255, 0.80);
-      font-size: 13px;
-      margin-bottom: 18px;
-      direction: ltr;
-    }
-
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #24ff94;
-      box-shadow: 0 0 18px rgba(36, 255, 148, 0.85);
-    }
-
     @media (max-width: 420px) {
-      .card { padding: 26px 16px 20px; border-radius: 26px; }
-      h1 { font-size: 30px; }
-      .avatar { width: 88px; height: 88px; font-size: 38px; }
-      .link { padding: 13px 13px; }
+      .card {
+        padding: 24px 16px 18px;
+        border-radius: 22px;
+      }
+
+      h1 {
+        font-size: 29px;
+      }
+
+      .avatar {
+        width: 78px;
+        height: 78px;
+        font-size: 33px;
+      }
     }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <div class="glow"></div>
+  <main class="page">
     <section class="card" aria-label="روابط Layeer الشخصية">
       <div class="avatar">L</div>
-      <div class="badge"><span class="dot"></span> layeer.dev</div>
+      <div class="domain"><span class="status-dot"></span> layeer.dev</div>
+
       <h1>Layeer</h1>
       <p class="subtitle">روابط حساباتي الشخصية في مكان واحد</p>
 
       <nav class="links" aria-label="روابط الحسابات">
         <a class="link" href="https://t.me/T_7_P" target="_blank" rel="noopener noreferrer">
-          <span class="left">
-            <span class="icon">✈️</span>
+          <span class="link-main">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21.7 4.3c.3-1.1-.8-2-1.8-1.6L2.6 9.4c-1.2.5-1.2 2.2.1 2.5l4.4 1.4 1.7 5.5c.4 1.2 1.9 1.5 2.7.5l2.5-3 4.8 3.5c.9.7 2.2.2 2.4-.9L21.7 4.3ZM8 12.4l9.6-5.9c.4-.2.8.3.5.6l-7.9 7.1-.3 3.1-1.2-4.1c-.1-.4-.4-.7-.7-.8Z"/>
+              </svg>
+            </span>
             <span class="info">
               <strong>Telegram</strong>
               <span>@T_7_P</span>
@@ -224,8 +228,12 @@
         </a>
 
         <a class="link" href="https://www.tiktok.com/@14sc" target="_blank" rel="noopener noreferrer">
-          <span class="left">
-            <span class="icon">♪</span>
+          <span class="link-main">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M15.2 3c.3 2.4 1.7 4 4.1 4.2v3.4c-1.5 0-2.9-.5-4.1-1.3v5.9c0 3.4-2.2 5.8-5.5 5.8-3 0-5.2-2.1-5.2-5 0-3.2 2.6-5.3 5.8-5.1v3.5c-1.4-.3-2.5.5-2.5 1.6 0 1 .8 1.7 1.8 1.7 1.3 0 2.1-.8 2.1-2.5V3h3.5Z"/>
+              </svg>
+            </span>
             <span class="info">
               <strong>TikTok</strong>
               <span>@14sc</span>
@@ -235,7 +243,7 @@
         </a>
       </nav>
 
-      <p class="footer">© <span id="year"></span> Layeer. All rights reserved.</p>
+      <p class="footer">© <span id="year"></span> Layeer</p>
     </section>
   </main>
 
