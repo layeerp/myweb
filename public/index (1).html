@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="روابط Layeer الشخصية" />
+  <meta property="og:title" content="Layeer | Links" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0d1117" />
+  <title>Layeer | Links</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg:        hsl(218, 28%, 7%);
+      --card:      hsl(218, 25%, 10%);
+      --card2:     hsl(218, 22%, 13%);
+      --border:    hsl(215, 20%, 18%);
+      --border2:   hsl(215, 20%, 20%);
+      --text:      hsl(213, 31%, 93%);
+      --text-soft: hsl(213, 31%, 88%);
+      --muted:     hsl(215, 16%, 52%);
+      --muted2:    hsl(215, 16%, 60%);
+      --muted3:    hsl(215, 16%, 42%);
+      --accent:    hsl(220, 90%, 68%);
+      --green:     #6ee7a0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      min-height: 100dvh;
+      font-family: 'Inter', Tahoma, Arial, sans-serif;
+      background:
+        radial-gradient(ellipse 60% 40% at 50% 0%, hsl(220 90% 68% / 0.07) 0%, transparent 70%),
+        var(--bg);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 56px 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* stagger children */
+    main > * { animation: fadeUp 0.45s ease both; }
+    main > *:nth-child(1) { animation-delay: 0.05s; }
+    main > *:nth-child(2) { animation-delay: 0.17s; }
+    main > *:nth-child(3) { animation-delay: 0.29s; }
+    main > *:nth-child(4) { animation-delay: 0.38s; }
+    main > *:nth-child(5) { animation-delay: 0.47s; }
+
+    /* ── Avatar ── */
+    .avatar {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: var(--card);
+      border: 1.5px solid hsl(220 90% 68% / 0.30);
+      box-shadow: 0 0 28px hsl(220 90% 68% / 0.08);
+      display: grid;
+      place-items: center;
+      margin-bottom: 20px;
+    }
+
+    .avatar span {
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text-soft);
+      direction: ltr;
+    }
+
+    /* ── Badge ── */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: var(--card2);
+      border: 1px solid var(--border2);
+      color: var(--muted2);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      direction: ltr;
+      margin-bottom: 28px;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 6px hsl(152 70% 70% / 0.50);
+      flex-shrink: 0;
+    }
+
+    /* ── Name ── */
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      text-align: center;
+      line-height: 1;
+      margin-bottom: 32px;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 24px;
+    }
+
+    /* ── Links ── */
+    nav {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    .link:hover {
+      border-color: hsl(220 90% 68% / 0.35);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px hsl(220 90% 68% / 0.08);
+    }
+
+    .link-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: var(--card2);
+      border: 1px solid var(--border2);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      color: var(--accent);
+    }
+
+    .icon svg {
+      width: 18px;
+      height: 18px;
+      display: block;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      text-align: right;
+    }
+
+    .info strong {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-soft);
+      display: block;
+    }
+
+    .info span {
+      font-size: 12px;
+      color: var(--muted);
+      direction: ltr;
+      font-family: Menlo, monospace;
+      display: block;
+    }
+
+    .arrow {
+      flex-shrink: 0;
+      color: var(--muted3);
+    }
+
+    @media (max-width: 420px) {
+      body { padding: 48px 16px; }
+      h1   { font-size: 1.75rem; }
+      .avatar { width: 80px; height: 80px; }
+      .avatar span { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+
+    <div class="avatar">
+      <span>L</span>
+    </div>
+
+    <div class="badge">
+      <span class="dot"></span>
+      layeer.dev
+    </div>
+
+    <h1>Layeer</h1>
+
+    <div class="divider"></div>
+
+    <nav aria-label="روابط الحسابات">
+
+      <a class="link" href="https://t.me/T_7_P" target="_blank" rel="noopener noreferrer">
+        <div class="link-left">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21.7 4.3c.3-1.1-.8-2-1.8-1.6L2.6 9.4c-1.2.5-1.2 2.2.1 2.5l4.4 1.4 1.7 5.5c.4 1.2 1.9 1.5 2.7.5l2.5-3 4.8 3.5c.9.7 2.2.2 2.4-.9L21.7 4.3ZM8 12.4l9.6-5.9c.4-.2.8.3.5.6l-7.9 7.1-.3 3.1-1.2-4.1c-.1-.4-.4-.7-.7-.8Z"/>
+            </svg>
+          </div>
+          <div class="info">
+            <strong>Telegram</strong>
+            <span>@T_7_P</span>
+          </div>
+        </div>
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M2.5 11.5L11.5 2.5M11.5 2.5H5.5M11.5 2.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <a class="link" href="https://www.tiktok.com/@14sc" target="_blank" rel="noopener noreferrer">
+        <div class="link-left">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M15.2 3c.3 2.4 1.7 4 4.1 4.2v3.4c-1.5 0-2.9-.5-4.1-1.3v5.9c0 3.4-2.2 5.8-5.5 5.8-3 0-5.2-2.1-5.2-5 0-3.2 2.6-5.3 5.8-5.1v3.5c-1.4-.3-2.5.5-2.5 1.6 0 1 .8 1.7 1.8 1.7 1.3 0 2.1-.8 2.1-2.5V3h3.5Z"/>
+            </svg>
+          </div>
+          <div class="info">
+            <strong>TikTok</strong>
+            <span>@14sc</span>
+          </div>
+        </div>
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M2.5 11.5L11.5 2.5M11.5 2.5H5.5M11.5 2.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+    </nav>
+  </main>
+</body>
+</html>
